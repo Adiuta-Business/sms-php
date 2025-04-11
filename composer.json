@@ -1,0 +1,47 @@
+{
+    "name": "adiuta/sms-php",
+    "description": "Sending SMS to different gateways starting with Adiuta Platform",
+    "type": "library",
+    "keywords": [
+        "SMS",
+        "Adiuta",
+        "SMS gateway"
+    ],
+    "require-dev": {
+        "codeception/codeception": "^5.2",
+        "codeception/module-phpbrowser": "*",
+        "codeception/module-asserts": "*",
+        "codeception/assert-throws": "^1.5"
+    },
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "psr-4": {
+            "Adiuta\\SMS\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stefano Mtangoo",
+            "email": "mwinjilisti@gmail.com"
+        }
+    ],
+    "require": {
+        "php-http/discovery": "^1.20",
+        "psr/http-message": "^2.0",
+        "psr/http-factory": "^1.1",
+        "psr/http-client": "^1.0",
+        "psr/log": "^3.0",
+        "giggsey/libphonenumber-for-php": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "scripts": {
+        "codeception": "vendor/bin/codecept",
+        "test": [
+            "@codeception run"
+        ]
+    }
+}
